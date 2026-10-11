@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: bazar --default;
+}
+
+@plugin "daisyui/theme" {
+  name: "bazar";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+  --color-base-100: #fafcfa;
+  --color-base-200: #f0f5f0;
+  --color-base-300: #e1e8e1;
+  --color-base-content: #1d271f;
+  --color-primary: #05893e;
+  --color-primary-content: #ffffff;
+  --color-success: #1a9951;
+  --color-error: #d03739;
+  --radius-box: 1rem;
+}
+
+@theme inline {
+  --font-sans: var(--font-hind);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+}
+
+body {
+  @apply bg-base-200 text-base-content font-sans antialiased;
+}
