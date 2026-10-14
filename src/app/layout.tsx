@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Hind_Siliguri } from "next/font/google";
 import { Toaster } from "react-hot-toast";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const hind = Hind_Siliguri({
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={`${hind.variable} font-sans antialiased`}>
         {children}
         <Toaster position="top-center" />
+        <SpeedInsights />
       </body>
     </html>
   );
